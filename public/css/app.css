@@ -1,0 +1,50 @@
+.logo {
+    max-height: 62px;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+@font-face {
+    font-family: 'MTD Valky Bold';
+    src: url('/fonts/MTD Valky Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.text-wrap {
+    font-family: 'MTD Valky Bold', sans-serif;
+}
+
+.dropdown-toggle.active {
+    color: #EC4747 !important;
+}
+
+.nav-item.dropdown .dropdown-item:hover {
+    background-color: #ED7D31;
+    color: white;
+}
+
+.footer {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-logo-img {
+    width: 130px;
+    height: auto;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul.inline li a {
+    text-decoration: none; 
+}
