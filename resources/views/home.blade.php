@@ -6,7 +6,8 @@
 @section('title', 'Trang chủ')
 
 @section('content')
-    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true"
                 aria-label="Slide 1"></button>
@@ -14,9 +15,9 @@
             <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
 
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ asset('images/bg-home-1.png') }}" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-inner" style="height: 100%;">
+            <div class="carousel-item active" style="height: 100%;">
+                <img src="{{ asset('images/bg-home-1.png') }}" class="d-block w-100" alt="Slide 1" style="height: 100%;">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px">
                     <h5 class="text-wrap">Chào mừng đến với</h5>
@@ -32,8 +33,8 @@
                 </div>
             </div>
 
-            <div class="carousel-item">
-                <img src="{{ asset('images/bg-home-2.png') }}" class="d-block w-100" alt="Slide 2">
+            <div class="carousel-item" style="height: 100%;">
+                <img src="{{ asset('images/bg-home-2.png') }}" class="d-block w-100" alt="Slide 2" style="height: 100%;">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px">
                     <h5 class="text-wrap">Chào mừng đến với</h5>
@@ -48,8 +49,8 @@
                     <a href="#learn-more" class="btn btn-primary mt-3">Tìm hiểu ngay</a>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="{{ asset('images/bg-home-3.png') }}" class="d-block w-100" alt="Slide 3">
+            <div class="carousel-item" style="height: 100%;">
+                <img src="{{ asset('images/bg-home-3.png') }}" class="d-block w-100" alt="Slide 3" style="height: 100%;">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                     <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px">
                     <h5 class="text-wrap">Chào mừng đến với</h5>

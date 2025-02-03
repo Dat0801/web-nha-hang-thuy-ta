@@ -15,72 +15,74 @@
 </head>
 
 <body class="@yield('body-class')">
-    <nav class="navbar navbar-expand-lg navbar-light p-3">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
-                <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo me-3">
-                <div class="text-wrap">
-                    <span class="d-block" style="font-size: 1.2rem;">Nhà hàng</span>
-                    <span class="d-block text-uppercase fw-bold" style="font-size: 1.5rem;">Thủy tạ đầm sen</span>
+    <div class="position-relative">
+        <nav class="navbar navbar-expand-lg navbar-light py-3 px-5">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a class="navbar-brand d-flex align-items-center" href="{{ route('home') }}">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="logo me-3">
+                    <div class="text-wrap">
+                        <span class="d-block" style="font-size: 1.2rem;">Nhà hàng</span>
+                        <span class="d-block text-uppercase fw-bold" style="font-size: 1.5rem;">Thủy tạ đầm sen</span>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav d-flex gap-5 mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold {{ Request::routeIs('menu') ? 'active' : '' }}" href="{{ route('menu') }}">Thực đơn</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Sảnh tiệc
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Thuyền rồng Kim Long - Hoàng Long</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sảnh Ngân Sen</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sảnh Hoàng Sen - Kim Sen</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sảnh Thanh Sen</a></li>
+                            </ul>
+                        </li>
+    
+    
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="#">Phòng hội nghị</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="#">Khuyến mãi tiệc cưới</a>
+                        </li>
+                    </ul>
                 </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav d-flex gap-5 mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="{{ route('menu') }}">Thực đơn</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Sảnh tiệc
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Thuyền rồng Kim Long - Hoàng Long</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sảnh Ngân Sen</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sảnh Hoàng Sen - Kim Sen</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Sảnh Thanh Sen</a></li>
-                        </ul>
-                    </li>
-
-
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="#">Phòng hội nghị</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="#">Khuyến mãi tiệc cưới</a>
-                    </li>
-                </ul>
+    
+                <form class="d-flex">
+                    <div class="input-group">
+                        <input class="form-control border-start-0" type="search" placeholder="Tìm kiếm"
+                            aria-label="Search">
+                        <span class="input-group-text bg-white border-start-0">
+                            <i class="bi bi-search"></i>
+                        </span>
+                    </div>
+                </form>
             </div>
-
-            <form class="d-flex">
-                <div class="input-group">
-                    <input class="form-control border-start-0" type="search" placeholder="Tìm kiếm"
-                        aria-label="Search">
-                    <span class="input-group-text bg-white border-start-0">
-                        <i class="bi bi-search"></i>
-                    </span>
-                </div>
-            </form>
-        </div>
-    </nav>
-
-    <main>
-        @yield('content')
-    </main>
+        </nav>
+    
+        <main style="min-height: 90vh; overflow: hidden;">
+            @yield('content')
+        </main>
+    </div>
 
     <footer class="footer text-white pt-4" style="background-image: url('{{ asset('images/bg-footer.png') }}');">
         <div class="container">
