@@ -344,10 +344,9 @@
 
         window.scrollImages = function(direction, containerId) {
             const container = document.getElementById(containerId);
-            if (!container) return; // Nếu container không tồn tại, dừng
-
+            if (!container) return; 
             const images = container.getElementsByClassName('food-img');
-            if (images.length === 0) return; // Nếu không có ảnh nào, dừng lại
+            if (images.length === 0) return; 
 
             let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
 
@@ -356,22 +355,18 @@
             } else if (direction === 'right' && currentIndex < images.length - 1) {
                 currentIndex++;
             } else {
-                return; // Không thể cuộn tiếp
+                return; 
             }
 
-            // Loại bỏ class 'active' khỏi tất cả ảnh
             Array.from(images).forEach(img => img.classList.remove('active'));
 
-            // Đặt class 'active' cho ảnh mới
             images[currentIndex].classList.add('active');
 
-            // Cuộn đến ảnh mới
             container.scrollTo({
                 left: images[currentIndex].offsetLeft - container.offsetLeft,
                 behavior: 'smooth'
             });
 
-            // Cập nhật ảnh lớn
             changeMainImage(images[currentIndex]);
         };
     </script>

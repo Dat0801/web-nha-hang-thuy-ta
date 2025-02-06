@@ -24,3 +24,11 @@ Route::get('/menu', function () {
 Route::get('/banquet', function () {
     return view('banquet');
 })->name('banquet');
+
+Route::get('/wedding-promotion', function () {
+    return view('wedding-promotion');
+})->name('wedding-promotion');
+
+Route::get('/conference-room', function () {
+    return view('conference-room');
+})->name('conference-room');

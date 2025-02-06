@@ -7,7 +7,8 @@
     <title>@yield('title', 'Website')</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -30,15 +31,16 @@
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-    
+
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav d-flex gap-5 mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link fw-bold {{ Request::routeIs('menu') ? 'active' : '' }}" href="{{ route('menu') }}">Thực đơn</a>
+                            <a class="nav-link fw-bold {{ Request::routeIs('menu') ? 'active' : '' }}"
+                                href="{{ route('menu') }}">Thực đơn</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Sảnh tiệc
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -57,17 +59,20 @@
                                 <li><a class="dropdown-item" href="#">Sảnh Thanh Sen</a></li>
                             </ul>
                         </li>
-    
-    
+
+
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Phòng hội nghị</a>
+                            <a class="nav-link fw-bold {{ Request::routeIs('conference-room') ? 'active' : '' }}"
+                                href="{{ route('conference-room') }}">Phòng hội nghị</a>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link fw-bold" href="#">Khuyến mãi tiệc cưới</a>
+                            <a class="nav-link fw-bold {{ Request::routeIs('wedding-promotion') ? 'active' : '' }}"
+                                href="{{ route('wedding-promotion') }}">Khuyến mãi tiệc cưới</a>
                         </li>
                     </ul>
                 </div>
-    
+
                 <form class="d-flex">
                     <div class="input-group">
                         <input class="form-control border-start-0" type="search" placeholder="Tìm kiếm"
@@ -79,7 +84,7 @@
                 </form>
             </div>
         </nav>
-    
+
         <main style="min-height: 90vh; overflow: hidden;">
             @yield('content')
         </main>

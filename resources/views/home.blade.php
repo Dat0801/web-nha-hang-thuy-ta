@@ -19,7 +19,7 @@
             <div class="carousel-item active" style="height: 100%;">
                 <img src="{{ asset('images/bg-home-1.png') }}" class="d-block w-100" alt="Slide 1" style="height: 100%;">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px; margin-top: 10%;">
                     <h5 class="text-wrap">Chào mừng đến với</h5>
                     <h3 class="text-wrap">nhà hàng thủy tạ đầm sen</h3>
                     <p class="mb-0">
@@ -29,14 +29,14 @@
                         trí lý tưởng để các quý công ty tổ chức đại tiệc cuối năm, hoặc sự kiện, tiệc cưới, sinh nhật...
                     </p>
 
-                    <a href="#learn-more" class="btn btn-primary mt-3" style="width: 155px;">Tìm hiểu ngay</a>
+                    <a href="#learn-more" class="custom-btn mt-3" style="width: 155px;">Tìm hiểu ngay</a>
                 </div>
             </div>
 
             <div class="carousel-item" style="height: 100%;">
                 <img src="{{ asset('images/bg-home-2.png') }}" class="d-block w-100" alt="Slide 2" style="height: 100%;">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px; margin-top: 10%;">
                     <h5 class="text-wrap">Chào mừng đến với</h5>
                     <h3 class="text-wrap">nhà hàng thủy tạ đầm sen</h3>
                     <p class="mb-0">
@@ -46,13 +46,13 @@
                         trí lý tưởng để các quý công ty tổ chức đại tiệc cuối năm, hoặc sự kiện, tiệc cưới, sinh nhật...
                     </p>
 
-                    <a href="#learn-more" class="btn btn-primary mt-3">Tìm hiểu ngay</a>
+                    <a href="#learn-more" class="custom-btn mt-3">Tìm hiểu ngay</a>
                 </div>
             </div>
             <div class="carousel-item" style="height: 100%;">
                 <img src="{{ asset('images/bg-home-3.png') }}" class="d-block w-100" alt="Slide 3" style="height: 100%;">
                 <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo" class="mb-3" style="max-height:150px; margin-top: 10%;">
                     <h5 class="text-wrap">Chào mừng đến với</h5>
                     <h3 class="text-wrap">nhà hàng thủy tạ đầm sen</h3>
                     <p class="mb-0">
@@ -62,7 +62,7 @@
                         trí lý tưởng để các quý công ty tổ chức đại tiệc cuối năm, hoặc sự kiện, tiệc cưới, sinh nhật...
                     </p>
 
-                    <a href="#learn-more" class="btn btn-primary mt-3">Tìm hiểu ngay</a>
+                    <a href="#learn-more" class="custom-btn mt-3">Tìm hiểu ngay</a>
                 </div>
             </div>
         </div>
