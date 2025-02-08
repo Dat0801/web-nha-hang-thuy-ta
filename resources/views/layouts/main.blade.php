@@ -39,24 +39,27 @@
                                 href="{{ route('menu') }}">Thực đơn</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown"
-                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle fw-bold {{ Request::routeIs('banquet-*') ? 'active' : '' }}"
+                                href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 Sảnh tiệc
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Thuyền rồng Kim Long - Hoàng Long</a></li>
+                                <li><a class="dropdown-item" href="{{ route('banquet-kim-hoang-long') }}">Thuyền rồng
+                                        Kim Long - Hoàng Long</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Sảnh Ngân Sen</a></li>
+                                <li><a class="dropdown-item" href="{{ route('banquet-ngan-sen') }}">Sảnh Ngân Sen</a>
+                                </li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Sảnh Hoàng Sen - Kim Sen</a></li>
+                                <li><a class="dropdown-item" href="{{ route('banquet-hoang-kim-sen') }}">Sảnh Hoàng Sen - Kim Sen</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Sảnh Thanh Sen</a></li>
+                                <li><a class="dropdown-item" href="{{ route('banquet-thanh-sen') }}">Sảnh Thanh Sen</a></li>
                             </ul>
                         </li>
 
@@ -64,7 +67,6 @@
                         <li class="nav-item">
                             <a class="nav-link fw-bold {{ Request::routeIs('conference-room') ? 'active' : '' }}"
                                 href="{{ route('conference-room') }}">Phòng hội nghị</a>
-
                         </li>
                         <li class="nav-item">
                             <a class="nav-link fw-bold {{ Request::routeIs('wedding-promotion') ? 'active' : '' }}"
@@ -84,6 +86,18 @@
                 </form>
             </div>
         </nav>
+
+        <div class="position-fixed p-4 d-flex flex-column align-items-center"
+            style="bottom: 20px; right: 20px;">
+            <a href="tel:+123456789" class="btn btn-circle mb-3"
+                style="background-color: white; color: #C75D15; width: 56px; height: 56px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <i class="bi bi-telephone-fill fs-3"></i>
+            </a>
+            <a href="https://m.me/yourusername" target="_blank" class="btn btn-circle"
+                style="background-color: white; color: #C75D15; width: 56px; height: 56px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <i class="bi bi-messenger fs-3"></i>
+            </a>
+        </div>
 
         <main style="min-height: 90vh; overflow: hidden;">
             @yield('content')
@@ -127,23 +141,36 @@
 
 </html>
 <script>
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            e.stopPropagation();
+    document.addEventListener("DOMContentLoaded", function() {
+        let banquetMenu = document.getElementById("navbarDropdown");
 
-            let dropdownMenu = this.nextElementSibling;
+        if (banquetMenu.classList.contains("active")) {
+            banquetMenu.classList.add("always-active");
+        }
 
-            if (dropdownMenu.classList.contains('show')) {
-                this.classList.add('active');
-            } else {
-                this.classList.remove('active');
+        document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                let dropdownMenu = this.nextElementSibling;
+
+                if (dropdownMenu.classList.contains('show')) {
+                    this.classList.add('active');
+                } else {
+                    if (!this.classList.contains("always-active")) {
+                        this.classList.remove('active');
+                    }
+                }
+            });
+        });
+
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.dropdown')) {
+                document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+                    if (!toggle.classList.contains("always-active")) {
+                        toggle.classList.remove('active');
+                    }
+                });
             }
         });
-    });
-
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown-toggle').forEach(toggle => toggle.classList.remove('active'));
-        }
     });
 </script>

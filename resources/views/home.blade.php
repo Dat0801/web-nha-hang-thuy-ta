@@ -3,7 +3,7 @@
 
 @section('body-class', 'home')
 
-@section('title', 'Trang chủ')
+@section('title', 'Nhà hàng thủy tạ đầm sen')
 
 @section('content')
     <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel"

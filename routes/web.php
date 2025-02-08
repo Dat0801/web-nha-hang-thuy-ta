@@ -32,3 +32,19 @@ Route::get('/wedding-promotion', function () {
 Route::get('/conference-room', function () {
     return view('conference-room');
 })->name('conference-room');
+
+Route::get('/banquet-kim-hoang-long', function () {
+    return view('banquet-kim-hoang-long');
+})->name('banquet-kim-hoang-long');
+
+Route::get('/banquet-ngan-sen', function () {
+    return view('banquet-ngan-sen');
+})->name('banquet-ngan-sen');
+
+Route::get('/banquet-hoang-kim-sen', function () {
+    return view('banquet-hoang-kim-sen');
+})->name('banquet-hoang-kim-sen');
+
+Route::get('/banquet-thanh-sen', function () {
+    return view('banquet-thanh-sen');
+})->name('banquet-thanh-sen');

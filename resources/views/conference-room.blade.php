@@ -3,7 +3,7 @@
 
 @section('body-class', 'home')
 
-@section('title', 'Trang chủ')
+@section('title', 'Phòng hội nghị')
 
 @section('content')
     <div class="container-fluid">

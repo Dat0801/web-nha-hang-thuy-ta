@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Menu')
+@section('title', 'Thực đơn')
 
 @section('content')
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
@@ -141,19 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="position-absolute p-4 d-none d-md-flex flex-column align-items-center"
-                        style="bottom: 0; right: -30%">
-                        <a href="tel:+123456789" class="btn btn-circle mb-3"
-                            style="background-color: white; color: #C75D15; width: 56px; height: 56px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-                            <i class="bi bi-telephone-fill fs-3"></i>
-                        </a>
-                        <a href="https://m.me/yourusername" target="_blank" class="btn btn-circle"
-                            style="background-color: white; color: #C75D15; width: 56px; height: 56px; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-                            <i class="bi bi-messenger fs-3"></i>
-                        </a>
-                    </div>
                 </div>
-
             </div>
         </div>
     </div>
