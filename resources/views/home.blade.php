@@ -29,7 +29,7 @@
                         trí lý tưởng để các quý công ty tổ chức đại tiệc cuối năm, hoặc sự kiện, tiệc cưới, sinh nhật...
                     </p>
 
-                    <a href="#learn-more" class="custom-btn mt-3" style="width: 155px;">Tìm hiểu ngay</a>
+                    <a href="{{ route('menu') }}" class="custom-btn mt-3" style="width: 155px;">Tìm hiểu ngay</a>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@
                         trí lý tưởng để các quý công ty tổ chức đại tiệc cuối năm, hoặc sự kiện, tiệc cưới, sinh nhật...
                     </p>
 
-                    <a href="#learn-more" class="custom-btn mt-3">Tìm hiểu ngay</a>
+                    <a href="{{ route('menu') }}" class="custom-btn mt-3">Tìm hiểu ngay</a>
                 </div>
             </div>
             <div class="carousel-item" style="height: 100%;">
@@ -62,7 +62,7 @@
                         trí lý tưởng để các quý công ty tổ chức đại tiệc cuối năm, hoặc sự kiện, tiệc cưới, sinh nhật...
                     </p>
 
-                    <a href="#learn-more" class="custom-btn mt-3">Tìm hiểu ngay</a>
+                    <a href="{{ route('menu') }}" class="custom-btn mt-3">Tìm hiểu ngay</a>
                 </div>
             </div>
         </div>

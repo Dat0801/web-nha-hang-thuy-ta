@@ -88,7 +88,7 @@
         </nav>
 
         <div class="position-fixed p-4 d-flex flex-column align-items-center"
-            style="bottom: 20px; right: 20px;">
+            style="bottom: 20px; right: 20px; z-index: 999;">
             <a href="tel:+123456789" class="btn btn-circle mb-3"
                 style="background-color: white; color: #C75D15; width: 56px; height: 56px; border-radius: 50%; display: flex; justify-content: center; align-items: center; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                 <i class="bi bi-telephone-fill fs-3"></i>

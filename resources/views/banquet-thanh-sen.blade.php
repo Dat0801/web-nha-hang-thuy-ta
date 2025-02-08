@@ -114,7 +114,7 @@
             <h1 style="color: #ED7D31">Các sảnh tiệc khác</h1>
             <div class="row mt-2 mb-5">
                 <div class="col-md-4 text-center">
-                    <a href="">
+                    <a href="{{ route('banquet-kim-hoang-long') }}">
                         <img src="{{ asset('images/sanh-ngan-sen-11.png') }}" class="img-fluid w-100" alt="Sảnh Ngân Sen">
                     </a>
                     <div class="d-flex justify-content-between mt-2">
@@ -127,7 +127,7 @@
                 </div>
 
                 <div class="col-md-4 text-center">
-                    <a href="">
+                    <a href="{{ route('banquet-hoang-kim-sen') }}">
                         <img src="{{ asset('images/kim-long-hoang-long-9.png') }}" class="img-fluid w-100"
                             alt="Sảnh Hoàng Sen">
                     </a>
@@ -139,12 +139,12 @@
                 </div>
 
                 <div class="col-md-4 text-center">
-                    <a href="">
-                        <img src="{{ asset('images/kim-long-hoang-long-10.png') }}" class="img-fluid w-100"
-                            alt="Sảnh Thanh Sen">
+                    <a href="{{ route('banquet-ngan-sen') }}">
+                        <img src="{{ asset('images/kim-long-hoang-long-8.png') }}" class="img-fluid w-100"
+                            alt="Sảnh Ngân Sen">
                     </a>
                     <div class="d-flex justify-content-between mt-2">
-                        <h5 style="color: #C75D15">Sảnh Thanh Sen</h5>
+                        <h5 style="color: #C75D15">Sảnh Ngân Sen</h5>
                         <p class="text-muted">11/02/2020</p>
                     </div>
                 </div>
